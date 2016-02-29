@@ -20,8 +20,10 @@
 clc;clear;close all;
 
 %% parameters
-m = 0.1;            % mutation rate
-w = 0.5;            % selection pressure
+mp = 0.1;           % passenger mutation rate
+md = 0.1;           % driver mutation rate
+                    % ( 0 <= mp + md <= 1)
+w = 0.5;            % selection pressure ( 0 <= w <= 1)
 N = 1000;           % total cells    
 bits = 4;           % numerical genome length
 n = 2^bits;         % number of genomic types
@@ -30,7 +32,7 @@ b = 0;
 c = 5; 
 d = 1;
 A = buildA(n, a, b, c, d);  % payoff matrix dimension [n x n]
-q = buildQ(bits, m/2, m/2); % mutation matrix dimension [n x n]
+q = buildQ(bits, md, mp); % mutation matrix dimension [n x n]
 
 %% run average simulation
 totalTime = 25*N;  % a guess at how long the simulation will require for saturation
