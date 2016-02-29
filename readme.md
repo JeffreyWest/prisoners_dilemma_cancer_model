@@ -16,3 +16,5 @@ The code runs an evolutionary dynamics simulation, which is a constant populatio
 This simple model encompasses two phenotypes (healthy, cancer) which consist of 2^b genetic types in total, where b is the bit length of the 'numerical genome' of each cell. For example, for b = 4, there are 16 genetic types which are course-grained into 11 healthy and 5 cancer types. 
 
 ![Phenotype - Genotype Mapping](https://github.com/JeffreyWest/prisoners_dilemma_cancer_model/blob/master/genotype_phenotype_mapping.png "Phenotype - Genotype Mapping")
+
+This code runs a single stochastic simulation and plots the result.
